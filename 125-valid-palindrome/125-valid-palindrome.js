@@ -14,8 +14,6 @@ var isPalindrome = function(s) {
     let string1 = newArray.join('');
     let reverseArray = newArray.reverse();
     let reverseString = reverseArray.join('');
-    console.log('original:', string1);
-    console.log('reverse:', reverseString);
     if (reverseString === string1) {
         return true;
     } else {
