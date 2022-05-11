@@ -4,11 +4,10 @@
  */
 var longestCommonPrefix = function(strs) {
     let prefix = '';
-    let maxPrefixLength = Math.min(...strs.map(word => word.length));
+    const maxPrefixLength = Math.min(...strs.map(word => word.length));
     for (let i = 0; i < maxPrefixLength; i++) {
-        let char = strs[0][i];
-        if (strs.every(current => current[i] === char)) {
-            prefix += char;
+        if (strs.every(word => word[i] === strs[0][i])) {
+            prefix += strs[0][i];
         } else {
             break;
         }
