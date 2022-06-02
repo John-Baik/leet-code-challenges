@@ -3,11 +3,18 @@
  * @return {string}
  */
 var reverseWords = function(s) {
-    const newArray = s.split(' ');
-    let finalString = '';
-    for (let i = 0; i < newArray.length; i++) {
-        let index = newArray[i].split('').reverse().join('');
-        finalString = `${finalString} ${index}`;
+    let result = '';
+    let word = '';
+    
+    for (let i = 0; i < s.length; i++) {
+        let val = s[i];
+        if (val !== ' ') {
+            word = val + word;
+        } else {
+            result += word + val;
+            word = '';
+        }
     }
-    return finalString.trim();
+    result += word;
+    return result;
 };
