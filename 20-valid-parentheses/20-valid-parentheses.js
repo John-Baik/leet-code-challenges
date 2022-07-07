@@ -9,9 +9,6 @@ var isValid = function(s) {
       '{': '}'
     };
     const array = [];
-    if (s.length === 1) {
-        return false;
-    }
     for (let i = 0; i < s.length; i++) {
         if (s[i] === '(' || s[i] === '[' || s[i] === '{') {
             array.push(s[i]);
