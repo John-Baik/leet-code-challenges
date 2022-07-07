@@ -1,0 +1,29 @@
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isValid = function(s) {
+     const map = {
+      '(': ')',
+      '[': ']',
+      '{': '}'
+    };
+    const array = [];
+    if (s.length === 1) {
+        return false;
+    }
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === '(' || s[i] === '[' || s[i] === '{') {
+            array.push(s[i]);
+        } else {
+            if (s[i] === map[array[array.length - 1]]) {
+                array.pop();
+                continue;
+            } else {
+                return false;
+            }
+            
+        }
+    }
+    return array.length === 0;
+};
