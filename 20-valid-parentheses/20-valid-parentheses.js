@@ -18,8 +18,7 @@ var isValid = function(s) {
                 array.pop();
             } else {
                 return false;
-            }
-            
+            }   
         }
     }
     return array.length === 0;
