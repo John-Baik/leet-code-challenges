@@ -14,6 +14,6 @@ function twoSum(nums, target) {
                 array.push(i, j);
                 return array;
             }
-        }    
+        }
     }
 };
